@@ -1,0 +1,182 @@
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 76px;
+
+  padding: 0 4vw;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1000;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  background:
+    rgba(3, 5, 10, 0.72);
+
+  backdrop-filter:
+    blur(20px);
+}
+
+
+/* logo */
+
+.nav-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.ieee-mark {
+  font-size: 23px;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+
+  color: #f4f7fb;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.2);
+}
+
+.branch-name {
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: #8993a5;
+}
+
+
+/* links */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 38px;
+}
+
+.nav-links a {
+  position: relative;
+
+  font-size: 12px;
+
+  color: #aeb7c5;
+
+  transition:
+    color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 0;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #5be7ff,
+      #8b6cff
+    );
+
+  transition:
+    width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #f4f7fb;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* register */
+
+.nav-register {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    11px 19px;
+
+  border:
+    1px solid rgba(91, 231, 255, 0.65);
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  color: #edf5fc;
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-register:hover {
+  background:
+    linear-gradient(
+      100deg,
+      rgba(91, 231, 255, 0.15),
+      rgba(139, 108, 255, 0.15)
+    );
+
+  box-shadow:
+    0 0 25px rgba(91, 231, 255, 0.12);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* mobile */
+
+@media (max-width: 800px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .branch-name,
+  .divider {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 22px;
+  }
+}

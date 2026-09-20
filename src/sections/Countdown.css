@@ -1,0 +1,385 @@
+.countdown-box {
+  position: relative;
+
+  width: 100%;
+  max-width: 470px;
+
+  box-sizing: border-box;
+
+  padding: 18px 20px 15px;
+
+  border: 1px solid rgba(0, 234, 255, 0.35);
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 234, 255, 0.08),
+      rgba(100, 40, 255, 0.08)
+    ),
+    rgba(5, 10, 22, 0.94);
+
+  box-shadow:
+    0 0 30px rgba(0, 234, 255, 0.12),
+    inset 0 0 25px rgba(120, 50, 255, 0.06);
+
+  overflow: hidden;
+}
+
+
+/* LEFT ENERGY BAR */
+
+.countdown-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    #00eaff,
+    #7c3cff,
+    transparent
+  );
+
+  box-shadow:
+    0 0 15px rgba(0, 234, 255, 0.8);
+}
+
+
+/* TOP LABEL */
+
+.countdown-title {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom: 17px;
+
+  color: #00eaff;
+
+  font-family: inherit;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  text-align: center;
+}
+
+.countdown-title > span:nth-child(2) {
+  white-space: nowrap;
+}
+
+.countdown-line {
+  width: 22px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: rgba(0, 234, 255, 0.5);
+
+  box-shadow:
+    0 0 8px rgba(0, 234, 255, 0.5);
+}
+
+
+/* TIMER */
+
+.countdown-timer {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+
+/* NUMBER UNIT */
+
+.countdown-unit {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+.countdown-unit strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  text-shadow:
+    0 0 12px rgba(0, 234, 255, 0.35);
+}
+
+
+/* LABEL */
+
+.countdown-unit small {
+  display: block;
+
+  margin-top: 8px;
+
+  color: rgba(180, 210, 225, 0.65);
+
+  font-family: inherit;
+
+  font-size: 7px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* COLON */
+
+.countdown-colon {
+  flex-shrink: 0;
+
+  margin: 0 4px 15px;
+
+  color: #00eaff;
+
+  font-family: inherit;
+
+  font-size: 25px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  text-shadow:
+    0 0 10px rgba(0, 234, 255, 0.6);
+}
+
+
+/* EVENT DATES */
+
+.countdown-event-dates {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 17px;
+  padding-top: 11px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+}
+
+.countdown-event-dates span {
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+.countdown-event-dates i {
+  color: rgba(0, 234, 255, 0.55);
+
+  font-style: normal;
+}
+
+.countdown-event-dates b {
+  margin-left: 5px;
+
+  color: #00eaff;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+  .countdown-box {
+    max-width: 440px;
+
+    padding: 17px 16px 14px;
+  }
+
+  .countdown-unit strong {
+    font-size: 30px;
+  }
+
+  .countdown-colon {
+    font-size: 23px;
+
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .countdown-box {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 15px 9px 13px;
+
+    border-radius: 7px;
+  }
+
+
+  .countdown-title {
+    gap: 6px;
+
+    margin-bottom: 15px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.14em;
+  }
+
+
+  .countdown-line {
+    width: 13px;
+  }
+
+
+  .countdown-unit strong {
+    font-size: clamp(22px, 8vw, 30px);
+  }
+
+
+  .countdown-unit small {
+    margin-top: 7px;
+
+    font-size: 6px;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .countdown-colon {
+    margin: 0 1px 12px;
+
+    font-size: 19px;
+  }
+
+
+  .countdown-event-dates {
+    gap: 5px;
+
+    margin-top: 15px;
+    padding-top: 10px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.1em;
+  }
+
+
+  .countdown-event-dates b {
+    margin-left: 3px;
+
+    font-size: 6px;
+
+    letter-spacing: 0.1em;
+  }
+}
+
+
+/* =====================================
+   SMALL PHONES
+===================================== */
+
+@media (max-width: 380px) {
+
+  .countdown-box {
+    padding: 13px 5px 12px;
+  }
+
+
+  .countdown-title {
+    gap: 4px;
+
+    font-size: 6px;
+
+    letter-spacing: 0.1em;
+  }
+
+
+  .countdown-line {
+    width: 8px;
+  }
+
+
+  .countdown-unit strong {
+    font-size: 21px;
+  }
+
+
+  .countdown-unit small {
+    margin-top: 6px;
+
+    font-size: 5px;
+
+    letter-spacing: 0.09em;
+  }
+
+
+  .countdown-colon {
+    margin-left: 0;
+    margin-right: 0;
+
+    font-size: 16px;
+  }
+
+
+  .countdown-event-dates {
+    font-size: 6px;
+  }
+
+
+  .countdown-event-dates b {
+    font-size: 5px;
+  }
+}

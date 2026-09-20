@@ -1,0 +1,358 @@
+.tracks-section {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 8vw;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(76, 159, 255, 0.08),
+      transparent 30%
+    ),
+    #070a10;
+}
+
+.tracks-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+.tracks-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* LABEL */
+
+.tracks-label {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+
+  color: #8994a5;
+}
+
+.tracks-label span {
+  color: #5be7ff;
+}
+
+.tracks-label i {
+  width: 38px;
+  height: 1px;
+  background: rgba(91, 231, 255, 0.35);
+}
+
+.tracks-label p {
+  margin: 0;
+}
+
+/* HEADING */
+
+.tracks-heading {
+  margin-top: 45px;
+}
+
+.tracks-heading p {
+  margin-bottom: 5px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 4px;
+
+  color: #718096;
+}
+
+.tracks-heading h2 {
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.85;
+  letter-spacing: -5px;
+  font-weight: 800;
+}
+
+.tracks-heading h2 span {
+  color: transparent;
+
+  background:
+    linear-gradient(
+      100deg,
+      #5be7ff,
+      #4c9fff,
+      #8268ff
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* INTRO */
+
+.tracks-intro {
+  max-width: 550px;
+  margin-top: 35px;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: #8994a5;
+}
+
+/* TRACK LIST */
+
+.tracks-list {
+  margin-top: 90px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* CARD */
+
+.track-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 80px 1fr 60px;
+  gap: 35px;
+
+  padding: 45px 25px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition:
+    background 0.4s ease,
+    padding 0.4s ease;
+}
+
+.track-card::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 2px;
+
+  background:
+    linear-gradient(
+      #5be7ff,
+      #8268ff
+    );
+
+  transform: scaleY(0);
+  transform-origin: bottom;
+
+  transition: transform 0.4s ease;
+}
+
+.track-card:hover {
+  background: rgba(76, 159, 255, 0.035);
+  padding-left: 40px;
+}
+
+.track-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* NUMBER */
+
+.track-number {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #4c9fff;
+  padding-top: 7px;
+}
+
+/* MAIN */
+
+.track-main {
+  min-width: 0;
+}
+
+.track-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.track-title-row h3 {
+  margin: 0;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: -2px;
+
+  color: #f3f8ff;
+
+  transition: color 0.3s ease;
+}
+
+.track-card:hover .track-title-row h3 {
+  color: #5be7ff;
+}
+
+.track-arrow {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  color: #8994a5;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.track-card:hover .track-arrow {
+  border-color: #5be7ff;
+  color: #5be7ff;
+}
+
+/* TAGLINE */
+
+.track-tagline {
+  margin-top: 8px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+
+  color: #5be7ff;
+}
+
+/* DESCRIPTION */
+
+.track-description {
+  max-width: 650px;
+  margin-top: 22px;
+
+  font-size: 13px;
+  line-height: 1.8;
+
+  color: #7e8999;
+}
+
+/* TECHNOLOGIES */
+
+.track-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 25px;
+}
+
+.track-tech span {
+  padding: 7px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+
+  color: #687588;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.track-card:hover .track-tech span {
+  border-color: rgba(91, 231, 255, 0.2);
+  color: #9caec4;
+}
+
+/* RIGHT INDEX */
+
+.track-index {
+  align-self: center;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  color: #384353;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .tracks-section {
+    padding: 110px 25px;
+  }
+
+  .tracks-heading {
+    margin-top: 35px;
+  }
+
+  .tracks-heading h2 {
+    font-size: 4rem;
+    letter-spacing: -3px;
+  }
+
+  .tracks-intro {
+    font-size: 13px;
+  }
+
+  .tracks-list {
+    margin-top: 60px;
+  }
+
+  .track-card {
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+
+    padding: 35px 10px;
+  }
+
+  .track-card:hover {
+    padding-left: 18px;
+  }
+
+  .track-index {
+    display: none;
+  }
+
+  .track-title-row h3 {
+    font-size: 2rem;
+  }
+
+  .track-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .track-description {
+    font-size: 12px;
+  }
+
+}
