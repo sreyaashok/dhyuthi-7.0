@@ -128,6 +128,7 @@ function Hero() {
             }}
           />
 
+
           {/* PURPLE RING */}
 
           <motion.div
@@ -161,6 +162,7 @@ function Hero() {
             }}
           />
 
+
           {/* CYAN RING */}
 
           <motion.div
@@ -193,6 +195,7 @@ function Hero() {
               },
             }}
           />
+
 
           {/* THIN INNER RING */}
 
@@ -303,28 +306,40 @@ function Hero() {
             className="orbit-dot orbit-dot-one"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.4, duration: 1 }}
+            transition={{
+              delay: 2.4,
+              duration: 1,
+            }}
           />
 
           <motion.span
             className="orbit-dot orbit-dot-two"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.6, duration: 1 }}
+            transition={{
+              delay: 2.6,
+              duration: 1,
+            }}
           />
 
           <motion.span
             className="orbit-dot orbit-dot-three"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.8, duration: 1 }}
+            transition={{
+              delay: 2.8,
+              duration: 1,
+            }}
           />
 
           <motion.span
             className="orbit-dot orbit-dot-four"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 3, duration: 1 }}
+            transition={{
+              delay: 3,
+              duration: 1,
+            }}
           />
 
 
@@ -505,7 +520,7 @@ function Hero() {
 
 
         {/* =====================================
-            COUNTDOWN
+            LIVE COUNTDOWN
         ===================================== */}
 
         <motion.div
@@ -523,66 +538,7 @@ function Hero() {
             delay: 1.9,
           }}
         >
-
-          {/* VISIBLE TEST COUNTDOWN */}
-
-          <div
-            style={{
-              position: "relative",
-              zIndex: 99999,
-              display: "block",
-              width: "100%",
-              maxWidth: "500px",
-              marginTop: "30px",
-              padding: "20px",
-              background: "#111827",
-              border: "2px solid #00eaff",
-              borderRadius: "8px",
-              color: "white",
-              textAlign: "center",
-              boxSizing: "border-box",
-              boxShadow: "0 0 30px rgba(0, 234, 255, 0.25)",
-            }}
-          >
-
-            <div
-              style={{
-                color: "#00eaff",
-                fontSize: "12px",
-                fontWeight: "700",
-                letterSpacing: "3px",
-                marginBottom: "15px",
-              }}
-            >
-              COUNTDOWN TO DHYUTHI 7.0
-            </div>
-
-
-            <div
-              style={{
-                fontSize: "40px",
-                fontWeight: "700",
-                color: "#ffffff",
-                lineHeight: "1",
-              }}
-            >
-              12 : 08 : 42 : 19
-            </div>
-
-
-            <div
-              style={{
-                marginTop: "10px",
-                fontSize: "9px",
-                letterSpacing: "2px",
-                color: "#94a3b8",
-              }}
-            >
-              DAYS &nbsp;&nbsp; HOURS &nbsp;&nbsp; MIN &nbsp;&nbsp; SEC
-            </div>
-
-          </div>
-
+          <Countdown />
         </motion.div>
 
       </div>
